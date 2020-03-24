@@ -6,6 +6,8 @@ services:
         container_name: mongo
         image: mongo
         working_dir: /usr/local/sampleCollections
+        tty: true
+        stdin_open: true
         ports:
             - 27017:27017
         volumes:
