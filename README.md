@@ -14,6 +14,7 @@ MongoDB course at the ESGI
 $ cd
 $ git clone https://github.com/aminnairi/esgi-mongo.git ~/github/aminnairi/esgi-mongo
 $ cd ~/github/aminnairi/esgi-mongo
+$ git submodule update --init
 ```
 
 ## Start
