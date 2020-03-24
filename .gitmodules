@@ -1,0 +1,6 @@
+[submodule "dbkoda-data"]
+	path = dbkoda-data
+	url = https://github.com/SouthbankSoftware/dbkoda-data/
+[submodule "collections/dbkoda-data"]
+	path = collections/dbkoda-data
+	url = https://github.com/SouthbankSoftware/dbkoda-data
