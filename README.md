@@ -17,55 +17,24 @@ $ cd ~/github/aminnairi/esgi-mongo
 $ git submodule update --init
 ```
 
-## Start
+## Commands
 
-Starts the Docker Compose services.
+Commands | Description
+---|---
+`make start` | Start the `node`, `mongo`, `mongo-express` services
+`make install` | Install the Node.js dependencies
+`make mongo` | Open a MongoDB shell
+`make restore` | Restore the collections
+`make react` | Run the React app
+`make clean` | Clean untracked files
+`make stop` | Stop all the running services
+`make restart` | Alias for `make stop start`
 
-```console
-$ make start
-```
+## IP Addresses
 
 Exposed address | Description
 ---|---
 [`127.0.0.1:27017`](http://127.0.0.1:27017) | Mongo database
 [`127.0.0.1:8081`](http://127.0.0.1:8081) | Mongo administration panel
+[`127.0.0.1:3000`](http://127.0.0.1:3000) | React app
 
-## Restore
-
-Restore the dump of the folder `collections/dbkoda-data/SampleCollections`.
-
-```console
-$ make restore
-```
-
-## Mongo
-
-Opens a Mongo shell.
-
-```console
-$ make mongo
-```
-
-## Stop
-
-Stops the Docker Compose services.
-
-```console
-$ make stop
-```
-
-## Restart
-
-Restarts the Docker Compose services.
-
-```console
-$ make restart
-```
-
-## Clean
-
-Removes the `data` folder.
-
-```console
-$ make clean
-```
