@@ -29,3 +29,15 @@ services:
         environment:
             ME_CONFIG_MONGODB_ADMINUSERNAME: root
             ME_CONFIG_MONGODB_ADMINPASSWORD: password
+
+    node:
+        container_name: node
+        image: node
+        user: node
+        tty: true
+        stdin_open: true
+        working_dir: /home/node/app
+        ports:
+            - 127.0.0.1:3000:3000
+        volumes:
+            - ./client:/home/node/app
