@@ -9,7 +9,7 @@ services:
         tty: true
         stdin_open: true
         ports:
-            - 27017:27017
+          - 127.0.0.1:27017:27017
         volumes:
             - ./data:/data/db
             - ./collections/dbkoda-data/SampleCollections:/usr/local/sampleCollections
@@ -41,3 +41,16 @@ services:
             - 127.0.0.1:3000:3000
         volumes:
             - ./client:/home/node/app
+
+    server:
+        image: node
+        user: node
+        working_dir: /home/node
+        tty: true
+        stdin_open: true
+        environment:
+            MONGO_USERNAME: admin
+            MONGO_PASSWORD: password
+            MONGO_DATABASE: SampleCollections
+        volumes:
+            - ./server:/home/node

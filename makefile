@@ -1,7 +1,7 @@
-.PHONY: start stop restart mongo restore clean react install
+.PHONY: start stop restart mongo restore clean react install server
 
 start:
-	docker-compose up --detach mongo mongo-express node
+	docker-compose up --detach mongo mongo-express node server
 
 stop:
 	docker-compose down --volumes --remove-orphans
@@ -22,3 +22,6 @@ react:
 
 install:
 	docker-compose exec node npm install
+
+server:
+	docker-compose exec server npm start
